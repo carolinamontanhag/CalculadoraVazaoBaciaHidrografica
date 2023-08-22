@@ -1,0 +1,116 @@
+body {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #72cfee;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.logo {
+    max-width: 250px; /* Defina o tamanho desejado para a imagem */
+    height: auto;
+}
+
+menu {
+    display: flex;
+    flex-direction: column; /* Coloque os botões em uma coluna */
+    align-items: flex-start; /* Alinhar os botões ao topo verticalmente */
+    
+}
+
+.button-blue {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    padding: 10px 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 10px; /* Espaço entre os botões */
+    position: relative; /* Posição relativa para a sombra */
+}
+
+.button-blue:hover {
+    background-color: #26b7f4;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .button-blue {
+        font-size: 14px; /* Reduza o tamanho da fonte para telas menores */
+        padding: 8px 16px; /* Reduza o preenchimento */
+    }
+}
+
+/* Estilos para telas ainda menores */
+@media (max-width: 480px) {
+    .button-blue {
+        font-size: 12px; /* Reduza ainda mais o tamanho da fonte */
+        padding: 6px 12px; /* Reduza ainda mais o preenchimento */
+    }
+}
+
+.question-mark {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.question-mark:hover {
+    background-color: #26b7f4;
+}
+
+/* Linha amarela com sombra preta */
+.line {
+    width: 100%;
+    height: 5px;
+    background-color: yellow;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+/* Título centralizado e responsivo */
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* Regras de mídia para telas menores */
+@media (max-width: 768px) {
+    .title {
+        font-size: 18px; /* Tamanho ajustado para telas menores */
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
