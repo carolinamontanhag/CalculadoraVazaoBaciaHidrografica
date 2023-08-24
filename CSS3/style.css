@@ -5,60 +5,70 @@ body {
 }
 
 .header {
-    background-color: #72cfee;
-    padding: 10px;
     display: flex;
     align-items: flex-start;
 }
 
+.blue-bg {
+    width: 430px; /* Largura da faixa azul */
+    height: 100vh; /* Altura igual à altura da viewport */
+    background-color: #00a5cf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.white-bg {
+    width: calc(100% - 430px); /* Largura restante */
+    height: 100%; /* Altura igual à altura da viewport */
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .logo {
-    max-width: 250px; /* Defina o tamanho desejado para a imagem */
+    position: fixed;
+    max-width: 75%;
     height: auto;
+    margin-left: 50px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1; /* Coloca a logo acima das faixas de fundo */
 }
 
-menu {
+.menu {
+    padding: 20px;
     display: flex;
-    flex-direction: column; /* Coloque os botões em uma coluna */
-    align-items: flex-start; /* Alinhar os botões ao topo verticalmente */
-    
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 230px;
+    left: 20px; /* Ajusta a posição do menu */
+    z-index: 1; /* Coloca o menu acima das faixas de fundo */
 }
 
-.button-blue {
+.menu button {
     font-family: 'Franklin Gothic Medium', sans-serif;
-    background-color: whitesmoke;
-    color: black;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #80d2e7;
+    color: white;
     border: none;
-    padding: 10px 100px;
-    border-radius: 5px;
+    padding: 15px 100px;
+    border-radius: 10px;
     cursor: pointer;
-    margin: 30px;
     transition: background-color 0.3s ease-in-out;
-    margin-bottom: 10px; /* Espaço entre os botões */
-    position: relative; /* Posição relativa para a sombra */
 }
 
-.button-blue:hover {
-    background-color: #26b7f4;
-}
-
-/* Estilos para telas menores */
-@media (max-width: 768px) {
-    .button-blue {
-        font-size: 14px; /* Reduza o tamanho da fonte para telas menores */
-        padding: 8px 16px; /* Reduza o preenchimento */
-    }
-}
-
-/* Estilos para telas ainda menores */
-@media (max-width: 480px) {
-    .button-blue {
-        font-size: 12px; /* Reduza ainda mais o tamanho da fonte */
-        padding: 6px 12px; /* Reduza ainda mais o preenchimento */
-    }
+.menu button:hover {
+    background-color: #008bb3;
 }
 
 .question-mark {
-    display: inline-block;
+    position: fixed; /* Mantém a posição mesmo ao rolar a página */
+    bottom: 20px; /* Distância a partir do canto inferior */
+    left: 20px; /* Distância a partir do canto esquerdo */
     width: 30px;
     height: 30px;
     background-color: black;
@@ -68,33 +78,54 @@ menu {
     line-height: 30px;
     font-size: 20px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 .question-mark:hover {
     background-color: #26b7f4;
 }
 
-/* Linha amarela com sombra preta */
-.line {
-    width: 100%;
-    height: 5px;
+
+.vertical-line {
+    width: 5px;
+    height: 100%;
     background-color: yellow;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 400px;
+    z-index: 1;
 }
 
-/* Título centralizado e responsivo */
 .title {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     margin-top: 20px;
 }
 
-/* Regras de mídia para telas menores */
+/* Responsividade */
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        min-width: 60%;
+        float: left;
+        position: relative;
+        margin: 20;
+    }
+
+    .menu {
+        margin-top: 15px;
+        align-items: center;
+        width: 78%;
+        background-color: #00a5cf;
+    }
+
     .title {
-        font-size: 18px; /* Tamanho ajustado para telas menores */
+        font-size: 20px;
+        margin-top: 20px;
     }
 }
 
@@ -102,7 +133,8 @@ menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
+    padding: auto;
+    margin: 20px;
 }
 
 .column {
@@ -111,6 +143,6 @@ menu {
     margin: 10px;
     padding: 20px;
     background-color: #f0f0f0;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
