@@ -61,10 +61,62 @@ body {
     background-color: #008bb3;
 }
 
-.question-mark {
-    position: fixed; /* Mantém a posição mesmo ao rolar a página */
-    bottom: 20px; /* Distância a partir do canto inferior */
-    left: 20px; /* Distância a partir do canto esquerdo */
+/* tentativa de menu para celular */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu-button {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .blue-bg {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .mobile-menu {
+        display: block;
+        text-align: right;
+        margin-top: 10px;
+    }
+
+    .balloon {
+        position: relative;
+        margin-top: 5%;
+        width: 90%; /* Ajuste a largura conforme necessário */
+        margin-left: 5%; /* Ajuste a margem conforme necessário */
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+    }
+    .white-bg {
+        width: 100%;
+    }
+}
+/* fim da tentativa de menu para celular */
+
+/*.question-mark {
+    position: fixed; /* Mantém a posição mesmo ao rolar a página 
+    bottom: 20px; /* Distância a partir do canto inferior 
+    left: 20px; /* Distância a partir do canto esquerdo 
     width: 30px;
     height: 30px;
     background-color: black;
@@ -75,11 +127,48 @@ body {
     font-size: 20px;
     cursor: pointer;
 }
-
+*/
 .question-mark:hover {
     background-color: #26b7f4;
 }
+/* balao de comentario*/
+.info-balloon {
+    position: fixed;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 0px 4px  rgb(227, 239, 14);
+    color: #000000;
+    text-align: justify;
+    padding: 1%;
+    border-radius: 5px;
+    max-width: 13%;
+    min-height: 5%;
+    top: 15%;
+    left: 50%;
+    z-index: 1;
+}
 
+.question-mark:hover + .info-balloon {
+    display: block;
+}
+.equacoes:hover + .info-balloon {
+    display: block;
+}
+.equacoes1:hover + .info-balloon {
+    display: block;
+}
+.equacoes2:hover + .info-balloon {
+    display: block;
+}
+.equacoes3:hover + .info-balloon {
+    display: block;
+}
+/* termina balao de comentario*/
+
+.paragrafo-ballon {
+    color: #007ea3;
+    font-size: 60%;
+}
 
 .vertical-line {
     width: 1%;
@@ -93,8 +182,12 @@ body {
 
 .title {
     text-align: center;
-    font-size: auto;
+    font-size: 250%;
     margin-top: 1%;
+}
+
+.subtitulo {
+    font-size: 150%;
 }
 
 .equacoes{
@@ -103,6 +196,7 @@ body {
     margin-left: 15%;
     margin-top: 1%;
     position: relative;
+    cursor: pointer;
 }
 
 .equacoes1{
@@ -111,6 +205,7 @@ body {
     margin-left: 17%;
     margin-bottom: 2%;
     position: relative;
+    cursor: pointer;
 }
 
 .equacoes2{
@@ -119,6 +214,7 @@ body {
     margin-left: 10%;
     margin-bottom: 1%;
     position: relative;
+    cursor: pointer;
 }
 
 .equacoes3{
@@ -223,16 +319,8 @@ input {
     background-color: #007ea3;
 }
 
-#vazao {
-    width: 96%;
-    font-size: 100%;
-}
-
-#vazaoModificado {
-    width: 96%;
-    font-size: 100%;
-}
-
+#vazao,
+#vazaoModificado,
 #coeficienteC {
     width: 96%;
     font-size: 100%;
@@ -244,11 +332,11 @@ input {
     padding: 1%;
     border-radius: 50px;
     height: 65%; 
-    width: 20%; 
+    width: 24%; 
     position: fixed;
     top: 20%;
     right: 3%;
-    /*transform: translateX(0%);*/
+    /*transform: translateY(-150%);*/
     text-align: center;
     overflow-y: auto;
 }

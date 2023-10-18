@@ -19,7 +19,14 @@
                     <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de Concentração</button></a>
                     <a href="Modificado.html" target="_blank" rel="next"><button class="button-blue">Método Racional Modificado</button></a>
                     <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
-                    <div class="question-mark">?</div>
+                </div>
+                <div class="mobile-menu">
+                    <button onclick="toggleMenu()" class="mobile-menu-button">&#9776;</button>
+                    <div class="mobile-menu-content" id="mobileMenuContent">
+                        <a href="#">Cálculo Coeficiente C</a>
+                        <a href="#">Tempo de Concentração</a>
+                        <a href="#">Saiba Mais</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,8 +34,12 @@
             <h1 class="title">Cálculo de vazão pelo Método Racional</h1>
             <div class="container">
                 <div class="column">
-                    <h2>Insira os parâmetros da Equação da chuva para sua região: </h2>
+                    <h2 class="subtitulo">Insira os parâmetros da Equação da chuva para sua região: </h2>
                     <img src="imagens/Equação da chuva.png" alt="Equação da Chuva" class="equacoes">
+                    <div class="info-balloon">Site para cálculos de vazões máximas com foco em pequenas bacias hidrográficas, de até 2 km<sup>2</sup>
+                        <p class="paragrafo-ballon">Desenvolvido por: Carolina Montanha Garcez</p>
+                        <p class="paragrafo-ballon"> Contato: carolina.montanha.garcez@gmail.com</p>
+                    </div>
                         <div class="button-container">
                         <div class="input-container">
                             <div class="label-container"><label for="TR">Período de retorno T<sub>R</sub> (anos):</label></div>
@@ -50,12 +61,12 @@
                             <div class="label-container"><label for="n">Parâmetro n:</label></div>
                             <div class="input-field"><input type="number" step="any" id="n"></div>
                         </div>
-                        <h2 class="h2">Insira tempo de concentração calculado para sua bacia: </h2>
+                        <h2 class="subtitulo">Insira tempo de concentração calculado para sua bacia: </h2>
                         <div class="input-container">
                             <div class="label-container"><label for="tc">Tempo de concentração calculado t<sub>c</sub> (min):</label></div>
                             <div class="input-field"><input type="number" step="any" id="tc"></div>
                         </div>
-                        <h2>Insira os parâmetros de característica da sua bacia: </h2>
+                        <h2 class="subtitulo">Insira os parâmetros de característica da sua bacia: </h2>
                         <div class="input-container">
                             <div class="label-container"><label for="area">Área bacia (km<sup>2</sup>):</label></div>
                             <div class="input-field"><input type="number" step="any" id="area"></div>
@@ -65,8 +76,12 @@
                             <div class="input-field"><input type="number" step="any" id="c"></div>
                         </div>
                     </div>
-                    <h2>Equação para o cálculo pelo Método Racional: </h2>
+                    <h2 class="subtitulo">Equação para o cálculo pelo Método Racional: </h2>
                     <img src="imagens/Racional.png" alt="Equação Método Racional" class="equacoes1">
+                    <div class="info-balloon">Site para cálculos de vazões máximas com foco em pequenas bacias hidrográficas, de até 2 km<sup>2</sup>
+                        <p class="paragrafo-ballon">Desenvolvido por: Carolina Montanha Garcez</p>
+                        <p class="paragrafo-ballon"> Contato: carolina.montanha.garcez@gmail.com</p>
+                    </div>
                     <div class="button-container1">
                         <button class="calculate-button" onclick="calcularVazaoMetodoRacional()">Calcular vazão da bacia</button>
                         <p id="vazao"></p>
