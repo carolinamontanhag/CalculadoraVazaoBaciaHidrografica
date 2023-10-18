@@ -10,7 +10,7 @@ body {
 }
 
 .blue-bg {
-    width: 430px; /* Largura da faixa azul */
+    width: 410px; /* Largura da faixa azul */
     height: 100vh; /* Altura igual à altura da viewport */
     background-color: #00a5cf;
     position: absolute;
@@ -19,7 +19,7 @@ body {
     position: fixed;
 }
 .white-bg {
-    width: calc(100% - 430px); /* Largura restante */
+    width: calc(100% - 410px); /* Largura restante */
     height: 100%; /* Altura igual à altura da viewport */
     background-color: white;
     position: absolute;
