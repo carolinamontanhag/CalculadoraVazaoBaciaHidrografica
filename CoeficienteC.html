@@ -26,9 +26,9 @@
             <h1 class="title">Entenda o cálculo do coeficiente C</h1>
             <div class="container">
                 <div class="column">
-                    <h2>Com base na bacia estudada, insira os valores de áreas: </h2>
-                    <img src="imagens/CoeficienteC.png" alt="coeficiente C" class="equacoes2">
-                        <div class="button-container">
+                    <div class="button-container">
+                        <h2 class="subtitulo">Com base na bacia estudada, insira os valores de áreas: </h2>
+                        <img src="imagens/CoeficienteC.png" alt="coeficiente C" class="equacoes2">
                         <div class="input-container">
                             <div class="label-container"><label for="permeavel">Área permeável (km<sup>2</sup>):</label></div>
                             <div class="input-field"><input type="number" step="any" id="permeavel"></div>
@@ -37,7 +37,7 @@
                             <div class="label-container"><label for="impermeavel">Área impermeável (km<sup>2</sup>):</label></div>
                             <div class="input-field"><input type="number" step="any" id="impermeavel"></div>
                         </div>
-                        <h2 class="h2">Selecione os valores de C de acordo com as características de urbanização da bacia estudada:</h2>
+                        <h2 class="subtitulo">Selecione os valores de C de acordo com as características de urbanização da bacia estudada:</h2>
                         <div class="input-container">
                             <div class="label-container"><label for="cp">Coeficiente de escoamento da área permeável (C<sub>p</sub>):</label></div>
                             <div class="input-field"><input type="number" step="any" id="cp"></div>
@@ -48,14 +48,14 @@
                         </div>
                         <br>
                         <button class="calculate-button" onclick="calcularCoeficienteC()">Calcular Coeficiente C</button>
-                        <p id="coeficienteC"></p>   
+                        <p id="coeficienteC"></p>                             
+                    </div> 
                     <div class="balloon">
                         <p>oie vamos tentar</p>
                         <p><img src="imagens/wilken.gif" alt="Tabela coeficiente C" class="tabela"></p>
-                    </div>                           
-                </div> 
-            </div>
-        </div>  
-        
-</body>
+                    </div> 
+                </div>
+            </div>  
+        </div>
+    </body>
 </html>

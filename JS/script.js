@@ -67,12 +67,3 @@ function calcularCoeficienteC() {
     var coeficienteC = ((cp*permeavel)+(ci*impermeavel))/Atotal;
     document.getElementById("coeficienteC").textContent = "O coeficiente C para sua bacia é: " + coeficienteC.toFixed(2);
 }
-//tentativa de menu sanduiche
-function toggleMenu() {
-    var menuContent = document.getElementById("mobileMenuContent");
-    if (menuContent.style.display === "block") {
-        menuContent.style.display = "none";
-    } else {
-        menuContent.style.display = "block";
-    }
-}

@@ -26,60 +26,58 @@
             <h1 class="title">Cálculo de vazão pelo Método Racional Modificado</h1>
             <div class="container">
                 <div class="column">
-                    <h2>Insira os parâmetros da Equação da chuva para sua região: </h2>
-                    <img src="imagens/Equação da chuva.png" alt="Equação da Chuva" class="equacoes">
                         <div class="button-container">
-                        <div class="input-container">
-                            <div class="label-container"><label for="TR">Período de retorno T<sub>R</sub> (anos):</label></div>
-                            <div class="input-field"><input type="number" step="any" id="TR"></div>
+                            <h2 class="subtitulo">Insira os parâmetros da Equação da chuva para sua região: </h2>
+                            <img src="imagens/Equação da chuva.png" alt="Equação da Chuva" class="equacoes">
+                            <div class="input-container">
+                                <div class="label-container"><label for="TR">Período de retorno T<sub>R</sub> (anos):</label></div>
+                                <div class="input-field"><input type="number" step="any" id="TR"></div>
+                            </div>
+                            <div class="input-container">
+                                <div class="label-container"><label for="K">Parâmetro K:</label></div>
+                                <div class="input-field"><input type="number" step="any" id="K"></div>
+                            </div>
+                            <div class="input-container">
+                                <div class="label-container"><label for="m">Parâmetro m:</label></div>
+                                <div class="input-field"><input type="number" step="any" id="m"></div>
+                            </div>
+                            <div class="input-container">
+                                <div class="label-container"><label for="t0">Parâmetro t<sub>0</sub></label></div>
+                                <div class="input-field"><input type="number" step="any" id="t0"></div>
+                            </div>
+                            <div class="input-container">
+                                <div class="label-container"><label for="n">Parâmetro n:</label></div>
+                                <div class="input-field"><input type="number" step="any" id="n"></div>
+                            </div>
+                            <h2 class="subtitulo">Insira tempo de concentração calculado para sua bacia: </h2>
+                            <div class="input-container">
+                                <div class="label-container"><label for="tc">Tempo de concentração calculado t<sub>c</sub> (min):</label></div>
+                                <div class="input-field"><input type="number" step="any" id="tc"></div>
+                            </div>
+                            <h2 class="subtitulo">Insira os parâmetros de característica da sua bacia: </h2>
+                            <div class="input-container">
+                                <div class="label-container"><label for="area">Área bacia (km<sup>2</sup>):</label></div>
+                                <div class="input-field"><input type="number" step="any" id="area"></div>
+                            </div>
+                            <div class="input-container">
+                                <div class="label-container"><label for="c">Coeficiente calculado C:</label></div>
+                                <div class="input-field"><input type="number" step="any" id="c"></div>
+                            </div>
+                            <h2 class="subtitulo">Equação para o cálculo pelo Método Racional Modificado: </h2>
+                            <img src="imagens/Modificado.png" alt="Equacao metodo racional modificado" class="equacoes1"><br>
+                            <p>Rural:</p><img src="imagens/rural.png" alt="fi rural" class="equacoes3"><br>
+                            <p>Urbana:</p><img src="imagens/urbana.png" alt="fi urbana" class="equacoes3">
+                            <div class="selection-container">
+                                <label for="tipoBacia">Selecione o tipo de bacia:</label>
+                                <select id="tipoBacia" onchange="selecionarTipoBacia()">
+                                    <option value="escolha">Escolha uma opção</option>
+                                    <option value="urbana">Urbana</option>
+                                    <option value="rural">Rural</option>
+                                </select>
+                            </div>
+                            <button class="calculate-button" onclick="calcularVazaoMetodoRacionalModificado()">Calcular vazão da bacia</button>
+                            <p id="vazaoModificado"></p>
                         </div>
-                        <div class="input-container">
-                            <div class="label-container"><label for="K">Parâmetro K:</label></div>
-                            <div class="input-field"><input type="number" step="any" id="K"></div>
-                        </div>
-                        <div class="input-container">
-                            <div class="label-container"><label for="m">Parâmetro m:</label></div>
-                            <div class="input-field"><input type="number" step="any" id="m"></div>
-                        </div>
-                        <div class="input-container">
-                            <div class="label-container"><label for="t0">Parâmetro t<sub>0</sub></label></div>
-                            <div class="input-field"><input type="number" step="any" id="t0"></div>
-                        </div>
-                        <div class="input-container">
-                            <div class="label-container"><label for="n">Parâmetro n:</label></div>
-                            <div class="input-field"><input type="number" step="any" id="n"></div>
-                        </div>
-                        <h2 class="h2">Insira tempo de concentração calculado para sua bacia: </h2>
-                        <div class="input-container">
-                            <div class="label-container"><label for="tc">Tempo de concentração calculado t<sub>c</sub> (min):</label></div>
-                            <div class="input-field"><input type="number" step="any" id="tc"></div>
-                        </div>
-                        <h2>Insira os parâmetros de característica da sua bacia: </h2>
-                        <div class="input-container">
-                            <div class="label-container"><label for="area">Área bacia (km<sup>2</sup>):</label></div>
-                            <div class="input-field"><input type="number" step="any" id="area"></div>
-                        </div>
-                        <div class="input-container">
-                            <div class="label-container"><label for="c">Coeficiente calculado C:</label></div>
-                            <div class="input-field"><input type="number" step="any" id="c"></div>
-                        </div>
-                    </div>
-                    <h2>Equação para o cálculo pelo Método Racional Modificado: </h2>
-                    <img src="imagens/Modificado.png" alt="Equacao metodo racional modificado" class="equacoes1"><br>
-                    <p>Rural:</p><img src="imagens/rural.png" alt="fi rural" class="equacoes3"><br>
-                    <p>Urbana:</p><img src="imagens/urbana.png" alt="fi urbana" class="equacoes3">
-                    <div class="button-container1">
-                        <div class="selection-container">
-                            <label for="tipoBacia">Selecione o tipo de bacia:</label>
-                            <select id="tipoBacia" onchange="selecionarTipoBacia()">
-                                <option value="escolha">Escolha uma opção</option>
-                                <option value="urbana">Urbana</option>
-                                <option value="rural">Rural</option>
-                            </select>
-                        </div>
-                        <button class="calculate-button" onclick="calcularVazaoMetodoRacionalModificado()">Calcular vazão da bacia</button>
-                        <p id="vazaoModificado"></p>   
-                    </div> 
                     <div class="balloon">
                         <p>oie vamos tentar</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, soluta cum ullam incidunt eveniet architecto odio earum possimus cumque saepe sunt veritatis corporis? Ad inventore eligendi saepe, aut est facere culpa similique, accusantium porro corrupti nam nesciunt. Aperiam maiores perferendis vitae, ipsam consectetur ducimus id labore reiciendis magnam quas porro sapiente ea. Tempora quia harum vitae, iusto libero quod asperiores quaerat accusamus iure aperiam consequuntur nostrum eos minus aspernatur, ullam consectetur similique sit! Excepturi maiores aperiam, nemo alias quam omnis officia quas ducimus voluptates voluptatem ea optio dolor, quaerat expedita nulla. Saepe, minus mollitia sequi facilis assumenda reprehenderit ipsam quisquam autem natus tempora officia earum dolores totam repellat pariatur minima libero officiis ad rerum labore ut exercitationem? Totam magnam harum asperiores vitae atque laborum corrupti necessitatibus quod. Atque unde modi placeat hic culpa sint non illo, saepe perferendis corrupti quo accusamus voluptas natus magnam recusandae exercitationem similique blanditiis libero, iure impedit optio facere quis numquam porro. Amet delectus sunt minus doloribus magnam, culpa similique illum, quo vel alias at vitae itaque ut ad quae ea voluptate, sit accusantium necessitatibus consequuntur molestias deserunt debitis! Sed, similique molestias adipisci in fugit corrupti, totam praesentium aspernatur, eligendi facere ipsa accusamus saepe. Exercitationem molestias, labore debitis optio laboriosam ullam blanditiis, quam aspernatur nostrum earum facilis voluptas voluptates molestiae sed voluptatibus nisi libero architecto dicta illum rem porro quidem est sint! Quaerat sint quasi nihil et illo qui porro nobis voluptatum facere aspernatur unde quia ipsam excepturi non suscipit ut tempore, veniam labore cum. Vel minima asperiores doloremque amet sed ipsum voluptas! Quae, id similique soluta animi sint velit quas. Expedita explicabo suscipit, obcaecati nihil, fugit hic nisi quam distinctio ipsa repellendus iusto magnam. Perferendis, tempore accusamus quas architecto dolores nostrum reprehenderit consectetur atque voluptate quae sunt at adipisci nulla amet vero unde. Voluptate accusantium autem, vel nulla iure eum voluptas alias quidem magni commodi excepturi, deserunt consequuntur minima, illo necessitatibus et ab deleniti odio dolores. Ex iure nulla quod veniam quos maxime, enim asperiores et? Magni delectus ipsa veritatis illo recusandae. Facilis laudantium, harum deserunt dolore accusamus ducimus culpa voluptatem. Tenetur fuga ad earum commodi quas laboriosam nihil facere sed non excepturi rerum, at culpa architecto ducimus esse vel sit. Itaque, voluptatem facere. Culpa consectetur inventore tempore similique sed dolorem repellendus dolore. Doloribus accusamus qui, asperiores tempora a ad odit? Quam inventore adipisci nemo nostrum odit excepturi, reprehenderit exercitationem? Explicabo sed maiores sunt deserunt.</p>
