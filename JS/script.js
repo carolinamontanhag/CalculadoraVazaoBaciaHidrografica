@@ -16,7 +16,7 @@ function calcularVazaoMetodoRacional() {
     
     var intensidade = ((TR**m)*K)/((tc+t0)**n);
     var vazao = (c*intensidade*area)/3.6;
-    document.getElementById("vazao").textContent = "A vazão da sua bacia pelo Método Racional é: " + vazao.toFixed(2);
+    document.getElementById("vazao").textContent = "A vazão da sua bacia pelo Método Racional é: " + vazao.toFixed(2) + " m" + "\u00B3" + "/s";
 }
 
 function calcularVazaoMetodoRacionalModificado() {
@@ -42,12 +42,12 @@ function calcularVazaoMetodoRacionalModificado() {
 
     if (tipoBacia === "urbana") {
         vazaoModificado = vazao*(area**-0.15);
-        document.getElementById("vazaoModificado").textContent = "A vazão da bacia urbana pelo Método Racional Modificado é: " + vazaoModificado.toFixed(2);
+        document.getElementById("vazaoModificado").textContent = "A vazão da bacia urbana pelo Método Racional Modificado é: " + vazaoModificado.toFixed(2) + " m" + "\u00B3" + "/s";
     } else if (tipoBacia === "rural") {
         vazaoModificado = vazao*(area**-0.1);
-        document.getElementById("vazaoModificado").textContent = "A vazão da bacia rural pelo Método Racional Modificado é: " + vazaoModificado.toFixed(2);
+        document.getElementById("vazaoModificado").textContent = "A vazão da bacia rural pelo Método Racional Modificado é: " + vazaoModificado.toFixed(2) + " m" + "\u00B3" + "/s";
     } else {
-        document.getElementById("vazaoModificado").textContent = "Para realizar o cálculo é preciso escolher uma opção.";
+        document.getElementById("vazaoModificado").textContent = "Para realizar o cálculo é preciso selecionar o tipo de bacia.";
     }
 }
 
