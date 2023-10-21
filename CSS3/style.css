@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    font-family: 'Franklin Gothic', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -145,14 +145,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.title {
-    text-align: center;
-    font-size: 230%;
-    margin-top: 1%;
+.card{
+    font-size: 80%;
+    margin-top: 7%;
 }
 
-.subtitulo {
-    font-size: 130%;
+.title {
+    text-align: center;
+    font-size: 210%;
+    margin-top: 1%;
 }
 
 .equacoes{
@@ -196,6 +197,14 @@ body {
     height: auto;
     margin-left: 29%;
     margin-bottom: 1%;
+    position: relative;
+}
+
+.equacoestc {
+    max-width: 25%;
+    height: auto;
+    margin-left: 5%;
+    margin-bottom: 2%;
     position: relative;
 }
 
@@ -300,7 +309,7 @@ input {
 }
 
 .balloon {
-    background-color: #F0F0F0;
+    background-color: white;
     color: #43655A;
     padding: 1%;
     border-radius: 50px;
@@ -328,10 +337,7 @@ input {
 }
 
 .balloon p:nth-of-type(3) {
-    font-size: 130%;
-  }
-  .balloon p:nth-of-type(4) {
-    font-size: 100%;
+    font-size: 120%;
   }
 
 .tabela{
@@ -339,12 +345,13 @@ input {
     height: auto;
     position: relative;
     border-radius: 15px;
+    margin-left: 4%;
 }
 
 .column h2 {
-    text-align: center;
+    text-align: left;
     color: #333333;
-    font-size: 28px;
+    font-size: 120%;
     margin-bottom: 10px;
   }
   
@@ -355,23 +362,17 @@ input {
   }
   
   .column strong {
-    color: #000000;
+    color: #555555;
   }
   
   .column a {
-    color: #0077cc;
+    color: #333333;
   }
   
   .column a:hover {
     text-decoration: underline;
   }
-  
-  .column .equacoestc {
-    display: block;
-    margin: 10px auto;
-    max-width: 100%;
-    height: auto;
-  }
+
 
 /* tentativa de menu para celular */
 .mobile-menu {
@@ -379,6 +380,14 @@ input {
 }
 
 @media only screen and (max-width: 767px) {
+    .menu {
+        display: none;
+    }
+    .menu.active {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
     .blue-bg {
         display: none;
     }
@@ -389,8 +398,6 @@ input {
 
     .logo {
         display: block;
-        text-align: center;
-        margin-top: 10px;
     }
 
     .mobile-menu {
@@ -422,13 +429,13 @@ input {
     }
 
     .subtitulo{
-        font-size: 110%;
+        font-size: 100%;
         min-width: 140%;
     }
 
     .title {
         text-align: center;
-        font-size: 150%;
+        font-size: 140%;
         margin-top: 1%;
     }
 
@@ -483,10 +490,10 @@ input {
     }
 }  
 
+
+
 @media only screen and (min-width: 768px) and (max-width: 1024px){
-    .blue-bg {
-        display: none;
-    }
+
     .white-bg{
         width: 94%;
         right: 6%;
@@ -494,8 +501,6 @@ input {
 
     .logo {
         display: block;
-        text-align: center;
-        margin-top: 10px;
     }
 
     .balloon {
