@@ -321,20 +321,16 @@ input {
 .balloon p:first-child {
     font-size: 120%;
     font-weight: bold;
-    color: #43655A;
 }
 
 .balloon p:nth-child(2) {
     font-size: 100%;
-    color: #43655A;
 }
 
 .balloon p:nth-of-type(3) {
-    text-align: center;
     font-size: 130%;
   }
   .balloon p:nth-of-type(4) {
-    text-align: center;
     font-size: 100%;
   }
 
