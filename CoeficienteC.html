@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS3/style.css">
-    <script src="JS/script.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Coeficiente C</title>
-</head>
-<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS3/style.css">
+        <script src="JS/script.js"></script>
+        <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+        <title>Coeficiente C</title>
+    </head>
+
     <body>
+
+        <nav>
+            <div class="menu2">
+                <div class="sandwich-menu" onclick="toggleMenu()">
+                    <div class="bar">
+                        <img src="./imagens/menu.svg" alt="sandwich-menu" srcset="">
+                    </div>
+                </div>
+
+                <div class="menu-items" id="menuItems">
+
+                    <div class="blue-bg2">
+                        <!-- <div class="vertical-line"></div>  -->
+                        <!-- Linha vertical -->
+                        <img src="imagens/UTFPR.png" alt="Imagem Hidrologia" class="logo">
+                        <div class="menu">
+                            <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo
+                                    Coeficiente C</button></a>
+                            <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de
+                                    Concentração</button></a>
+                            <a href="Modificado.html" target="_blank" rel="next"><button class="button-blue">Método Racional
+                                    Modificado</button></a>
+                            <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
+                        </div>
+                        <div class="info-rodape">
+                            <p class="card">Desenvolvido por: <br>Carolina Montanha Garcez </p>
+                            <p class="card">Orientadora: Dr. <sup>a</sup> Andrea Jabur <br>Coorientador: Dr. Muriel Godoi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <div class="header">
             <div class="blue-bg">
                 <div class="vertical-line"></div> <!-- Linha vertical -->
                 <img src="imagens/UTFPR.png" alt="Imagem Hidrologia" class="logo">
                 <div class="menu">
-                    <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de Concentração</button></a>
+                    <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de
+                            Concentração</button></a>
                     <a href="index.html" target="_blank" rel="prev"><button class="button-blue">Método Racional</button></a>
-                    <a href="Modificado.html" target="_blank" rel="prev"><button class="button-blue">Método Racional Modificado</button></a>
+                    <a href="Modificado.html" target="_blank" rel="prev"><button class="button-blue">Método Racional
+                            Modificado</button></a>
                     <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
                 </div>
                 <div class="info-rodape">
@@ -34,36 +71,51 @@
                         <h2>Com base na bacia estudada, insira os valores de áreas: </h2>
                         <img src="imagens/CoeficienteC.png" alt="coeficiente C" class="equacoes2">
                         <div class="input-container">
-                            <div class="label-container"><label for="permeavel">Área do uso do solo 1 (km<sup>2</sup>):</label></div>
+                            <div class="label-container"><label for="permeavel">Área do uso do solo 1
+                                    (km<sup>2</sup>):</label></div>
                             <div class="input-field"><input type="number" step="any" id="permeavel"></div>
                         </div>
                         <div class="input-container">
-                            <div class="label-container"><label for="impermeavel">Área do uso do solo 2 (km<sup>2</sup>):</label></div>
+                            <div class="label-container"><label for="impermeavel">Área do uso do solo 2
+                                    (km<sup>2</sup>):</label></div>
                             <div class="input-field"><input type="number" step="any" id="impermeavel"></div>
                         </div>
-                        <h2>Selecione os valores de C de acordo com as características de urbanização da bacia estudada:</h2>
+                        <h2>Selecione os valores de C de acordo com as características de urbanização da bacia estudada:
+                        </h2>
                         <div class="input-container">
-                            <div class="label-container"><label for="cp">Coeficiente de escoamento da área permeável (C<sub>p</sub>):</label></div>
+                            <div class="label-container"><label for="cp">Coeficiente de escoamento da área permeável
+                                    (C<sub>p</sub>):</label></div>
                             <div class="input-field"><input type="number" step="any" id="cp"></div>
                         </div>
                         <div class="input-container">
-                            <div class="label-container"><label for="ci">Coeficiente de escoamento da área impermeável (C<sub>i</sub>):</label></div>
+                            <div class="label-container"><label for="ci">Coeficiente de escoamento da área impermeável
+                                    (C<sub>i</sub>):</label></div>
                             <div class="input-field"><input type="number" step="any" id="ci"></div>
                         </div>
                         <br>
                         <button class="calculate-button" onclick="calcularCoeficienteC()">Calcular Coeficiente C</button>
-                        <p id="coeficienteC"></p>                             
-                    </div> 
+                        <p id="coeficienteC"></p>
+                    </div>
                     <div class="balloon">
-                        <p>O coeficiente de escoamento, geralmente representado por C, é um parâmetro hidrológico que indica a fração da precipitação total que se transforma em escoamento superficial. Em outras palavras, ele representa a proporção da chuva que se torna escoamento, em oposição à parte que é absorvida pelo solo ou perdida por evaporação.</p>
-                        <p>O valor do coeficiente de escoamento depende de vários fatores, incluindo o tipo de solo, cobertura do solo, topografia, práticas de uso da terra e condições climáticas. Por exemplo, áreas urbanas com muitas superfícies pavimentadas tendem a ter coeficientes de escoamento mais altos, enquanto áreas naturais, como florestas e pastagens, geralmente têm coeficientes de escoamento mais baixos.</p>
+                        <p>O coeficiente de escoamento, geralmente representado por C, é um parâmetro hidrológico que indica
+                            a fração da precipitação total que se transforma em escoamento superficial. Em outras palavras,
+                            ele representa a proporção da chuva que se torna escoamento, em oposição à parte que é absorvida
+                            pelo solo ou perdida por evaporação.</p>
+                        <p>O valor do coeficiente de escoamento depende de vários fatores, incluindo o tipo de solo,
+                            cobertura do solo, topografia, práticas de uso da terra e condições climáticas. Por exemplo,
+                            áreas urbanas com muitas superfícies pavimentadas tendem a ter coeficientes de escoamento mais
+                            altos, enquanto áreas naturais, como florestas e pastagens, geralmente têm coeficientes de
+                            escoamento mais baixos.</p>
                         <p>A seguir esta uma tabela usada pelo TUCCI para descrever o tipo de solo.</p>
-                        <p><img src="imagens/wilken.gif" alt="Tabela coeficiente C" class="tabela"><strong>Fonte: Wilken (1978) apud Tucci (2000).</strong></p>
-                        <p>Você devera dividir o uso e ocupação do solo de sua bacia e depois pode utilizar o mecanismo de cálculo ao lado para chegar ao coeficiente C de sua bacia! </p>
+                        <p><img src="imagens/wilken.gif" alt="Tabela coeficiente C" class="tabela"><strong>Fonte: Wilken
+                                (1978) apud Tucci (2000).</strong></p>
+                        <p>Você devera dividir o uso e ocupação do solo de sua bacia e depois pode utilizar o mecanismo de
+                            cálculo ao lado para chegar ao coeficiente C de sua bacia! </p>
                         <p>Depois de estar com o valor em mãos, leve-o para a página de cálculo da bacia hidrográfica!</p>
-                    </div> 
+                    </div>
                 </div>
-            </div>  
+            </div>
         </div>
     </body>
+
 </html>

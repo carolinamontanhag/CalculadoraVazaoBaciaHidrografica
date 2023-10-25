@@ -1,3 +1,16 @@
+function toggleMenu() {
+    var menuItems = document.getElementById("menuItems");
+    var blueBg = document.querySelector('.blue-bg2');
+
+    if (menuItems.style.display === "flex") {
+        menuItems.style.display = "none";
+        blueBg.style.display = "none";
+    } else {
+        menuItems.style.display = "flex";
+        blueBg.style.display = "initial";
+    }
+}
+
 function calcularVazaoMetodoRacional() {
     var TR = parseFloat(document.getElementById("TR").value);
     var K = parseFloat(document.getElementById("K").value);
@@ -13,9 +26,9 @@ function calcularVazaoMetodoRacional() {
         window.alert("Por favor, preencha todos os campos com valores numéricos.");
         return;
     }
-    
-    var intensidade = ((TR**m)*K)/((tc+t0)**n);
-    var vazao = (c*intensidade*area)/3.6;
+
+    var intensidade = ((TR ** m) * K) / ((tc + t0) ** n);
+    var vazao = (c * intensidade * area) / 3.6;
     document.getElementById("vazao").textContent = "A vazão da sua bacia pelo Método Racional é: " + vazao.toFixed(2) + " m" + "\u00B3" + "/s";
 }
 
@@ -37,14 +50,14 @@ function calcularVazaoMetodoRacionalModificado() {
 
     var tipoBacia = document.getElementById("tipoBacia").value;
     var vazaoModificado;
-    var intensidade = ((TR**m)*K)/((tc+t0)**n);
-    var vazao = (c*intensidade*area)/3.6;
+    var intensidade = ((TR ** m) * K) / ((tc + t0) ** n);
+    var vazao = (c * intensidade * area) / 3.6;
 
     if (tipoBacia === "urbana") {
-        vazaoModificado = vazao*(area**-0.15);
+        vazaoModificado = vazao * (area ** -0.15);
         document.getElementById("vazaoModificado").textContent = "A vazão da bacia urbana pelo Método Racional Modificado é: " + vazaoModificado.toFixed(2) + " m" + "\u00B3" + "/s";
     } else if (tipoBacia === "rural") {
-        vazaoModificado = vazao*(area**-0.1);
+        vazaoModificado = vazao * (area ** -0.1);
         document.getElementById("vazaoModificado").textContent = "A vazão da bacia rural pelo Método Racional Modificado é: " + vazaoModificado.toFixed(2) + " m" + "\u00B3" + "/s";
     } else {
         document.getElementById("vazaoModificado").textContent = "Para realizar o cálculo é preciso selecionar o tipo de bacia.";
@@ -54,7 +67,7 @@ function calcularVazaoMetodoRacionalModificado() {
 function calcularCoeficienteC() {
     var permeavel = parseFloat(document.getElementById("permeavel").value);
     var impermeavel = parseFloat(document.getElementById("impermeavel").value);
-    var Atotal = permeavel+impermeavel;
+    var Atotal = permeavel + impermeavel;
     var cp = parseFloat(document.getElementById("cp").value);
     var ci = parseFloat(document.getElementById("ci").value);
 
@@ -63,7 +76,7 @@ function calcularCoeficienteC() {
         window.alert("Por favor, preencha todos os campos com valores numéricos.");
         return;
     }
-    
-    var coeficienteC = ((cp*permeavel)+(ci*impermeavel))/Atotal;
+
+    var coeficienteC = ((cp * permeavel) + (ci * impermeavel)) / Atotal;
     document.getElementById("coeficienteC").textContent = "O coeficiente C para sua bacia é: " + coeficienteC.toFixed(2);
 }

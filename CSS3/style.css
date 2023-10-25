@@ -12,16 +12,21 @@ body {
 }
 
 .blue-bg {
-    width: 22%; /* Largura da faixa azul */
-    height: 100vh; /* Altura igual à altura da viewport */
+    width: 22%;
+    /* Largura da faixa azul */
+    height: 100vh;
+    /* Altura igual à altura da viewport */
     background-color: #00a5cf;
     top: 0;
     left: 0;
     position: fixed;
 }
+
 .white-bg {
-    width: calc(100% - 22%); /* Largura restante */
-    height: 90%; /* Altura igual à altura da viewport */
+    width: calc(100% - 22%);
+    /* Largura restante */
+    height: 90%;
+    /* Altura igual à altura da viewport */
     background-color: white;
     position: fixed;
     top: 0;
@@ -33,7 +38,8 @@ body {
     height: auto;
     margin-left: 10%;
     margin-top: 3%;
-    z-index: 1; /* Coloca a logo acima das faixas de fundo */
+    z-index: 1;
+    /* Coloca a logo acima das faixas de fundo */
 }
 
 .menu {
@@ -41,8 +47,10 @@ body {
     flex-direction: column;
     position: 20%;
     top: 22%;
-    left: 4%; /* Ajusta a posição do menu */
-    z-index: 1; /* Coloca o menu acima das faixas de fundo */
+    left: 4%;
+    /* Ajusta a posição do menu */
+    z-index: 1;
+    /* Coloca o menu acima das faixas de fundo */
 }
 
 .menu button {
@@ -130,22 +138,24 @@ body {
 }
 
 .info-rodape {
-    position: fixed; 
-    bottom: 1%;  
-    left: 3%;  
+    position: absolute;
+    bottom: 1%;
+    left: 3%;
     min-width: 15%;
     min-height: 12%;
     background-color: #344A53;
     border-radius: 15px;
     color: white;
     text-align: center;
-    z-index: 1;    
+    z-index: 1;
     box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.3);
     font-size: small;
     font-family: 'Montserrat', sans-serif;
+    width: 90%;
+
 }
 
-.card{
+.card {
     font-size: 80%;
     margin-top: 7%;
 }
@@ -156,7 +166,7 @@ body {
     margin-top: 1%;
 }
 
-.equacoes{
+.equacoes {
     max-width: 30%;
     height: auto;
     margin-left: 25%;
@@ -166,7 +176,7 @@ body {
     cursor: pointer;
 }
 
-.equacoes1{
+.equacoes1 {
     max-width: 20%;
     height: auto;
     margin-left: 29%;
@@ -175,7 +185,7 @@ body {
     cursor: pointer;
 }
 
-.equacoes2{
+.equacoes2 {
     max-width: 80%;
     height: auto;
     margin-left: 10%;
@@ -184,7 +194,7 @@ body {
     cursor: pointer;
 }
 
-.equacoes3{
+.equacoes3 {
     max-width: 20%;
     height: auto;
     margin-left: 29%;
@@ -192,7 +202,7 @@ body {
     position: relative;
 }
 
-.equacoes4{
+.equacoes4 {
     max-width: 15%;
     height: auto;
     margin-left: 29%;
@@ -224,7 +234,7 @@ body {
     border-radius: 15px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
-    
+
 }
 
 .input-container {
@@ -313,8 +323,8 @@ input {
     color: #43655A;
     padding: 1%;
     border-radius: 50px;
-    height: 50%; 
-    width: 24%; 
+    height: 50%;
+    width: 24%;
     position: fixed;
     top: 20%;
     right: 2%;
@@ -338,9 +348,9 @@ input {
 
 .balloon p:nth-of-type(3) {
     font-size: 120%;
-  }
+}
 
-.tabela{
+.tabela {
     width: 95%;
     height: auto;
     position: relative;
@@ -353,47 +363,93 @@ input {
     color: #333333;
     font-size: 120%;
     margin-bottom: 10px;
-  }
-  
-  .column p {
+}
+
+.column p {
     color: #555555;
     font-size: 16px;
     line-height: 1.6;
-  }
-  
-  .column strong {
-    color: #555555;
-  }
-  
-  .column a {
-    color: #333333;
-  }
-  
-  .column a:hover {
-    text-decoration: underline;
-  }
+}
 
+.column strong {
+    color: #555555;
+}
+
+.column a {
+    color: #333333;
+}
+
+.column a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: none;
+}
 
 /* tentativa de menu para celular */
 .mobile-menu {
     display: none;
 }
 
-@media only screen and (max-width: 767px) {
-    .menu {
-        display: none;
+
+
+
+@media only screen and (max-width: 545px) {
+    .menu-items {
+        width: 80%;
+        background-color: #007ea3;
+
     }
-    .menu.active {
+
+    .info-rodape {
+        position: relative;
+    }
+
+
+    nav {
+        display: block;
+        position: relative;
+        /* ou absolute, fixed, ou sticky dependendo da sua necessidade */
+        z-index: 1000;
+        /* Um valor alto para garantir que esteja na frente dos outros elementos */
+    }
+
+    .bar {
+        background-color: #007ea3;
+    }
+
+    .blue-bg2 {
+        background-color: #007ea3;
+        /* Largura da faixa azul */
+        height: 100vh;
+        /* Altura igual à altura da viewport */
+        /* background-color: #00a5cf; */
+        top: 0;
+        left: 0;
+        /* position: fixed; */
+        z-index: 1000000;
+        margin: 0 auto;
+        display: none;
+        /* display: initial; */
+
+    }
+
+
+    /* .menu.active {
         display: block;
         width: 80%;
         margin: 0 auto;
-    }
+    } */
+
     .blue-bg {
         display: none;
     }
-    .white-bg{
+
+    .white-bg {
         width: 94%;
         right: 6%;
+        margin-top: 25px;
     }
 
     .logo {
@@ -428,7 +484,7 @@ input {
         min-width: 100%;
     }
 
-    .subtitulo{
+    .subtitulo {
         font-size: 100%;
         min-width: 140%;
     }
@@ -439,31 +495,31 @@ input {
         margin-top: 1%;
     }
 
-    .equacoes{
+    .equacoes {
         max-width: 50%;
         margin-left: 60%;
         margin-bottom: 6%;
     }
 
-    .equacoes1{
+    .equacoes1 {
         max-width: 25%;
         margin-left: 60%;
         margin-bottom: 4%;
     }
 
-    .equacoes2{
+    .equacoes2 {
         min-width: 130%;
         margin-left: 7%;
         margin-bottom: 10%;
     }
 
-    .equacoes3{
+    .equacoes3 {
         max-width: 35%;
         margin-left: 55%;
         margin-bottom: 5%;
     }
 
-    .equacoes4{
+    .equacoes4 {
         max-width: 25%;
         margin-left: 65%;
         margin-bottom: 1%;
@@ -471,13 +527,13 @@ input {
 
     .calculate-button {
         width: 50%;
-    } 
+    }
 
     .label-container {
         min-width: 105%;
         font-size: 90%;
-    } 
-    
+    }
+
     .input-field {
         min-width: 30%;
         margin-right: 1%;
@@ -488,15 +544,49 @@ input {
         font-size: 90%;
         margin-bottom: 10%;
     }
-}  
+}
 
 
 
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 546px) and (max-width: 1024px) {
+    .info-rodape {
+        position: relative;
+        margin-top: 10rem;
+    }
 
-    .white-bg{
+    nav {
+        display: block;
+        position: relative;
+        /* ou absolute, fixed, ou sticky dependendo da sua necessidade */
+        z-index: 1000;
+        /* Um valor alto para garantir que esteja na frente dos outros elementos */
+    }
+
+    .bar {
+        background-color: #007ea3;
+    }
+
+    .menu-items {
+        width: 25%;
+        background-color: #007ea3;
+
+    }
+
+    .white-bg {
         width: 94%;
         right: 6%;
+        margin-top: 2%;
+    }
+
+    .blue-bg2 {
+        background-color: #007ea3;
+        /* Largura da faixa azul */
+        height: 100vh;
+        /* Altura igual à altura da viewport */
+        top: 0;
+        left: 0;
+        z-index: 1000000;
+        display: none;
     }
 
     .logo {
@@ -519,13 +609,14 @@ input {
         display: flex;
         flex-direction: column;
         align-items: center;
+        display: none;
     }
 
     .column {
         min-width: 100%;
     }
 
-    .subtitulo{
+    .subtitulo {
         font-size: 120%;
     }
 
@@ -536,31 +627,31 @@ input {
         margin-left: 10%;
     }
 
-    .equacoes{
+    .equacoes {
         max-width: 40%;
         margin-left: 50%;
         margin-bottom: 5%;
     }
 
-    .equacoes1{
+    .equacoes1 {
         max-width: 25%;
         margin-left: 60%;
         margin-bottom: 4%;
     }
 
-    .equacoes2{
+    .equacoes2 {
         min-width: 120%;
         margin-left: 15%;
         margin-bottom: 1%;
     }
 
-    .equacoes3{
+    .equacoes3 {
         max-width: 25%;
         margin-left: 60%;
         margin-bottom: 5%;
     }
 
-    .equacoes4{
+    .equacoes4 {
         max-width: 20%;
         margin-left: 65%;
         margin-bottom: 1%;
@@ -568,14 +659,14 @@ input {
 
     .calculate-button {
         width: 35%;
-    } 
+    }
 
     .label-container {
         min-width: 110%;
         font-size: 90%;
-   
-    } 
-    
+
+    }
+
     .input-field {
         min-width: 20%;
         margin-right: 1%;
@@ -587,5 +678,6 @@ input {
         margin-bottom: 10%;
 
     }
+
 
 }

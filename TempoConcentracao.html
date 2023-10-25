@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS3/style.css">
-    <script src="JS/script.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Tempo de Concentração</title>
-</head>
-<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS3/style.css">
+        <script src="JS/script.js"></script>
+        <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+        <title>Tempo de Concentração</title>
+    </head>
+
     <body>
+
+        <nav>
+            <div class="menu2">
+                <div class="sandwich-menu" onclick="toggleMenu()">
+                    <div class="bar">
+                        <img src="./imagens/menu.svg" alt="sandwich-menu" srcset="">
+                    </div>
+                </div>
+
+                <div class="menu-items" id="menuItems">
+
+                    <div class="blue-bg2">
+                        <!-- <div class="vertical-line"></div>  -->
+                        <!-- Linha vertical -->
+                        <img src="imagens/UTFPR.png" alt="Imagem Hidrologia" class="logo">
+                        <div class="menu">
+                            <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo
+                                    Coeficiente C</button></a>
+                            <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de
+                                    Concentração</button></a>
+                            <a href="Modificado.html" target="_blank" rel="next"><button class="button-blue">Método Racional
+                                    Modificado</button></a>
+                            <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
+                        </div>
+                        <div class="info-rodape">
+                            <p class="card">Desenvolvido por: <br>Carolina Montanha Garcez </p>
+                            <p class="card">Orientadora: Dr. <sup>a</sup> Andrea Jabur <br>Coorientador: Dr. Muriel Godoi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <div class="header">
             <div class="blue-bg">
                 <div class="vertical-line"></div> <!-- Linha vertical -->
                 <img src="imagens/UTFPR.png" alt="Imagem Hidrologia" class="logo">
                 <div class="menu">
-                    <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo Coeficiente C</button></a>
+                    <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo Coeficiente
+                            C</button></a>
                     <a href="index.html" target="_blank" rel="prev"><button class="button-blue">Método Racional</button></a>
-                    <a href="Modificado.html" target="_blank" rel="prev"><button class="button-blue">Método Racional Modificado</button></a>
+                    <a href="Modificado.html" target="_blank" rel="prev"><button class="button-blue">Método Racional
+                            Modificado</button></a>
                     <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
                 </div>
                 <div class="info-rodape">
@@ -32,12 +69,23 @@
                 <div class="column">
                     <h2>Preparado(a) para entender um pouco mais sobre tempo de concentração? Vamos começar!</h2>
                     <p></p>
-                    <p><strong>DEFINIÇÃO:</strong> O tempo de concentração é o tempo necessário para que a água de uma bacia hidrográfica percorra a distância máxima até o ponto de saída. É uma medida importante na hidrologia, pois influencia diretamente o comportamento do escoamento e a estimativa da vazão de pico.</p>
-                    <p>Os fatores que influenciam o tempo de concentração de uma dada bacia são: a forma da bacia, a sua declividade média, a sinuosidade e a declividade do seu curso principal, entre outros.</p>
-                    <p>Há diversas fórmulas para calcular o tempo de concentração; a grande maioria leva em conta apenas a declividade do curso principal e a área da bacia. A mais adequada depende das condições específicas para as quais foram geradas. Para tanto é preciso identificar a origem dos estudos, experimentais de campo ou laboratoriais, para que possam ser identificadas suas limitações e aplicabilidade.</p>
-                    <p>Para este site, será necessário que você analise as características de sua bacia e escolha uma equação que vá representa-la mais adequadamente.</p>
-                    <p>Para te ajudar na escolha, é sugerido que leia o texto do seguinte link: <a href="https://www.redalyc.org/pdf/564/56416458014.pdf" target="_blank" rel="external"><i>Clique aqui</i></a></p>
-                    <p>Este artigo foi escrito por MATA LIMA e mostra as várias possibilidades de cálculo do tempo de concentração com equações e o melhor cenário para utilizá-las.</p>
+                    <p><strong>DEFINIÇÃO:</strong> O tempo de concentração é o tempo necessário para que a água de uma bacia
+                        hidrográfica percorra a distância máxima até o ponto de saída. É uma medida importante na
+                        hidrologia, pois influencia diretamente o comportamento do escoamento e a estimativa da vazão de
+                        pico.</p>
+                    <p>Os fatores que influenciam o tempo de concentração de uma dada bacia são: a forma da bacia, a sua
+                        declividade média, a sinuosidade e a declividade do seu curso principal, entre outros.</p>
+                    <p>Há diversas fórmulas para calcular o tempo de concentração; a grande maioria leva em conta apenas a
+                        declividade do curso principal e a área da bacia. A mais adequada depende das condições específicas
+                        para as quais foram geradas. Para tanto é preciso identificar a origem dos estudos, experimentais de
+                        campo ou laboratoriais, para que possam ser identificadas suas limitações e aplicabilidade.</p>
+                    <p>Para este site, será necessário que você analise as características de sua bacia e escolha uma
+                        equação que vá representa-la mais adequadamente.</p>
+                    <p>Para te ajudar na escolha, é sugerido que leia o texto do seguinte link: <a
+                            href="https://www.redalyc.org/pdf/564/56416458014.pdf" target="_blank" rel="external"><i>Clique
+                                aqui</i></a></p>
+                    <p>Este artigo foi escrito por MATA LIMA e mostra as várias possibilidades de cálculo do tempo de
+                        concentração com equações e o melhor cenário para utilizá-las.</p>
                     <p>Equação de Kirpich:</p>
                     <img src="imagens/KIRPICH.png" alt="Kirpich" class="equacoestc">
                     <p>Equação de kerby:</p>
@@ -49,15 +97,29 @@
                     <p>Equação de Carter:</p>
                     <img src="imagens/CARTER.png" alt="Carter" class="equacoestc">
                     <p>Pontos de atenção:</p>
-                    <p>A seleção e o uso de equações para calcular o tempo de concentração em estudos hidrológicos requerem cuidado e consideração atenta. Cada fórmula é baseada em suposições específicas e pode variar em sua aplicabilidade, dependendo das características únicas da bacia hidrográfica em questão. Ao aplicar essas equações, é fundamental considerar as seguintes precauções:</p>
-                    <p><strong>Adequação do Contexto:</strong> Certifique-se de que a equação escolhida seja apropriada para o tipo e tamanho da bacia hidrográfica em estudo, levando em conta as características do solo, topografia e uso da terra.<br>
-                    <strong>Limitações e Suposições:</strong> Reconheça as limitações e suposições inerentes a cada equação, como a natureza simplificada dos modelos e a dependência de parâmetros que podem variar ao longo do tempo.<br>
-                    <strong>Validação dos Resultados:</strong> Sempre que possível, valide os resultados obtidos por meio das equações com dados reais de campo e observações históricas para garantir a confiabilidade e a precisão dos cálculos.</p>
-                    <p>Ao estar ciente desses cuidados ao escolher e aplicar equações de tempo de concentração, você pode realizar análises hidrológicas mais precisas e tomar decisões mais informadas ao planejar e projetar infraestruturas hídricas e sistemas de drenagem. </p>
-                    <p><strong>Agora calcule o tempo de concentração para sua bacia e volte para a página de calculo da vazão para adicionar o valor encontrado!</strong></p>
-                </div> 
+                    <p>A seleção e o uso de equações para calcular o tempo de concentração em estudos hidrológicos requerem
+                        cuidado e consideração atenta. Cada fórmula é baseada em suposições específicas e pode variar em sua
+                        aplicabilidade, dependendo das características únicas da bacia hidrográfica em questão. Ao aplicar
+                        essas equações, é fundamental considerar as seguintes precauções:</p>
+                    <p><strong>Adequação do Contexto:</strong> Certifique-se de que a equação escolhida seja apropriada para
+                        o tipo e tamanho da bacia hidrográfica em estudo, levando em conta as características do solo,
+                        topografia e uso da terra.<br>
+                        <strong>Limitações e Suposições:</strong> Reconheça as limitações e suposições inerentes a cada
+                        equação, como a natureza simplificada dos modelos e a dependência de parâmetros que podem variar ao
+                        longo do tempo.<br>
+                        <strong>Validação dos Resultados:</strong> Sempre que possível, valide os resultados obtidos por
+                        meio das equações com dados reais de campo e observações históricas para garantir a confiabilidade e
+                        a precisão dos cálculos.
+                    </p>
+                    <p>Ao estar ciente desses cuidados ao escolher e aplicar equações de tempo de concentração, você pode
+                        realizar análises hidrológicas mais precisas e tomar decisões mais informadas ao planejar e projetar
+                        infraestruturas hídricas e sistemas de drenagem. </p>
+                    <p><strong>Agora calcule o tempo de concentração para sua bacia e volte para a página de calculo da
+                            vazão para adicionar o valor encontrado!</strong></p>
+                </div>
             </div>
-        </div>  
-        
-</body>
+        </div>
+
+    </body>
+
 </html>

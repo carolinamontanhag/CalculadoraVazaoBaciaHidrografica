@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS3/style.css">
-    <script src="JS/script.js"></script>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <title>Calculadora de Vazão</title>
-</head>
-<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS3/style.css">
+        <script src="JS/script.js"></script>
+        <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+        <title>Calculadora de Vazão</title>
+    </head>
+
     <body>
+
+        <nav>
+            <div class="menu2">
+                <div class="sandwich-menu" onclick="toggleMenu()">
+                    <div class="bar">
+                        <img src="./imagens/menu.svg" alt="sandwich-menu" srcset="">
+                    </div>
+                </div>
+
+                <div class="menu-items" id="menuItems">
+
+                    <div class="blue-bg2">
+                        <!-- <div class="vertical-line"></div>  -->
+                        <!-- Linha vertical -->
+                        <img src="imagens/UTFPR.png" alt="Imagem Hidrologia" class="logo">
+                        <div class="menu">
+                            <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo
+                                    Coeficiente C</button></a>
+                            <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de
+                                    Concentração</button></a>
+                            <a href="Modificado.html" target="_blank" rel="next"><button class="button-blue">Método Racional
+                                    Modificado</button></a>
+                            <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
+                        </div>
+                        <div class="info-rodape">
+                            <p class="card">Desenvolvido por: <br>Carolina Montanha Garcez </p>
+                            <p class="card">Orientadora: Dr. <sup>a</sup> Andrea Jabur <br>Coorientador: Dr. Muriel Godoi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <div class="header">
             <div class="blue-bg">
                 <div class="vertical-line"></div> <!-- Linha vertical -->
                 <img src="imagens/UTFPR.png" alt="Imagem Hidrologia" class="logo">
                 <div class="menu">
-                    <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo Coeficiente C</button></a>
-                    <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de Concentração</button></a>
-                    <a href="Modificado.html" target="_blank" rel="next"><button class="button-blue">Método Racional Modificado</button></a>
+                    <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo
+                            Coeficiente C</button></a>
+                    <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de
+                            Concentração</button></a>
+                    <a href="Modificado.html" target="_blank" rel="next"><button class="button-blue">Método Racional
+                            Modificado</button></a>
                     <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
                     <!-- <div class="question-mark">?</div>
-                        <div class="info-balloon">Site para cálculos de vazões máximas com foco em pequenas bacias hidrográficas, de até 2 km<sup>2</sup>
-                        <p class="paragrafo-ballon">Desenvolvido por: Carolina Montanha Garcez</p>
-                        <p class="paragrafo-ballon"> Contato: carolina.montanha.garcez@gmail.com</p>
-                    </div> -->
+                            <div class="info-balloon">Site para cálculos de vazões máximas com foco em pequenas bacias hidrográficas, de até 2 km<sup>2</sup>
+                            <p class="paragrafo-ballon">Desenvolvido por: Carolina Montanha Garcez</p>
+                            <p class="paragrafo-ballon"> Contato: carolina.montanha.garcez@gmail.com</p>
+                        </div> -->
                 </div>
                 <div class="info-rodape">
                     <p class="card">Desenvolvido por: <br>Carolina Montanha Garcez </p>
@@ -35,84 +73,113 @@
             <h1 class="title">Cálculo de vazão pelo Método Racional</h1>
             <div class="container">
                 <div class="column">
-                        <div class="button-container">
-                            <h2>Insira os parâmetros da Equação da chuva para sua região: </h2>
-                            <img src="imagens/Equação da chuva.png" alt="Equação da Chuva" class="equacoes">
-                            <div class="input-container">
-                                <div class="label-container"><label for="TR">Período de retorno T<sub>R</sub> (anos):</label></div>
-                                <div class="input-field"><input type="number" step="any" id="TR"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="K">Parâmetro K:</label></div>
-                                <div class="input-field"><input type="number" step="any" id="K"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="m">Parâmetro m:</label></div>
-                                <div class="input-field"><input type="number" step="any" id="m"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="t0">Parâmetro t<sub>0</sub></label></div>
-                                <div class="input-field"><input type="number" step="any" id="t0"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="n">Parâmetro n:</label></div>
-                                <div class="input-field"><input type="number" step="any" id="n"></div>
-                            </div>
-                            <h2>Insira tempo de concentração calculado para sua bacia: </h2>
-                            <div class="input-container">
-                                <div class="label-container"><label for="tc">Tempo de concentração calculado t<sub>c</sub> (min):</label></div>
-                                <div class="input-field"><input type="number" step="any" id="tc"></div>
-                            </div>
-                            <h2>Insira os parâmetros de característica da sua bacia: </h2>
-                            <div class="input-container">
-                                <div class="label-container"><label for="area">Área bacia (km<sup>2</sup>):</label></div>
-                                <div class="input-field"><input type="number" step="any" id="area"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="c">Coeficiente calculado C:</label></div>
-                                <div class="input-field"><input type="number" step="any" id="c"></div>
-                            </div>
-                            <h2>Equação para o cálculo pelo Método Racional: </h2>
-                             <img src="imagens/Racional.png" alt="Equação Método Racional" class="equacoes4">
-                        </div>
-                    
                     <div class="button-container">
-                        <button class="calculate-button" onclick="calcularVazaoMetodoRacional()">Calcular vazão da bacia</button>
+                        <h2>Insira os parâmetros da Equação da chuva para sua região: </h2>
+                        <img src="imagens/Equação da chuva.png" alt="Equação da Chuva" class="equacoes">
+                        <div class="input-container">
+                            <div class="label-container"><label for="TR">Período de retorno T<sub>R</sub>
+                                    (anos):</label></div>
+                            <div class="input-field"><input type="number" step="any" id="TR"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="K">Parâmetro K:</label></div>
+                            <div class="input-field"><input type="number" step="any" id="K"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="m">Parâmetro m:</label></div>
+                            <div class="input-field"><input type="number" step="any" id="m"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="t0">Parâmetro t<sub>0</sub></label></div>
+                            <div class="input-field"><input type="number" step="any" id="t0"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="n">Parâmetro n:</label></div>
+                            <div class="input-field"><input type="number" step="any" id="n"></div>
+                        </div>
+                        <h2>Insira tempo de concentração calculado para sua bacia: </h2>
+                        <div class="input-container">
+                            <div class="label-container"><label for="tc">Tempo de concentração calculado t<sub>c</sub>
+                                    (min):</label></div>
+                            <div class="input-field"><input type="number" step="any" id="tc"></div>
+                        </div>
+                        <h2>Insira os parâmetros de característica da sua bacia: </h2>
+                        <div class="input-container">
+                            <div class="label-container"><label for="area">Área bacia (km<sup>2</sup>):</label></div>
+                            <div class="input-field"><input type="number" step="any" id="area"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="c">Coeficiente calculado C:</label></div>
+                            <div class="input-field"><input type="number" step="any" id="c"></div>
+                        </div>
+                        <h2>Equação para o cálculo pelo Método Racional: </h2>
+                        <img src="imagens/Racional.png" alt="Equação Método Racional" class="equacoes4">
+                    </div>
+
+                    <div class="button-container">
+                        <button class="calculate-button" onclick="calcularVazaoMetodoRacional()">Calcular vazão da
+                            bacia</button>
                         <p id="vazao"></p>
-                    </div> 
+                    </div>
                     <div class="balloon">
-                        <p>Bem-vindo ao nosso site para calcular a vazão de pico usando o método racional na hidrologia.</p>
-                        <p>Este método é amplamente utilizado para estimar a vazão de pico em bacias hidrográficas de até 2km<sup>2</sup>, proporcionando uma visão inicial valiosa sobre o comportamento das águas em determinada região, sendo utilizadas no dimensionamento de obras hidráulicas, tais como galerias pluviais, dissipadores de energia, canais e bueiros.</p>
+                        <p>Bem-vindo ao nosso site para calcular a vazão de pico usando o método racional na hidrologia.
+                        </p>
+                        <p>Este método é amplamente utilizado para estimar a vazão de pico em bacias hidrográficas de
+                            até 2km<sup>2</sup>, proporcionando uma visão inicial valiosa sobre o comportamento das
+                            águas em determinada região, sendo utilizadas no dimensionamento de obras hidráulicas, tais
+                            como galerias pluviais, dissipadores de energia, canais e bueiros.</p>
                         <p>Está preparado(a)? Vamos começar! </p>
                         <p><strong>Passo 1:</strong> Compreendendo o Método Racional:</p>
-                        <p>O método racional é amplamente utilizado para estimar a vazão de pico em bacias hidrográficas pequenas, assumindo que a intensidade da chuva é uniforme sobre a área da bacia durante a tempestade.</p>
-                        <p>Essa equação esta representada ao lado, antes de apertar em calcular, leia este texto até o final para entender o que é cada incógnita. </p>
+                        <p>O método racional é amplamente utilizado para estimar a vazão de pico em bacias hidrográficas
+                            pequenas, assumindo que a intensidade da chuva é uniforme sobre a área da bacia durante a
+                            tempestade.</p>
+                        <p>Essa equação esta representada ao lado, antes de apertar em calcular, leia este texto até o
+                            final para entender o que é cada incógnita. </p>
                         <p><strong>Passo 2:</strong> Escolhendo a Intensidade de Chuva (i):</p>
-                        <p>A intensidade de chuva (representada ao lado como i<sub>máx</sub>), é a quantidade de chuva que cai por unidade de tempo. Ela pode ser obtida usando equações de chuvas intensas, como a equação de chuvas de intensidade-duração-frequência (IDF). Esta equação varia de acordo com a localização geográfica e o tempo de retorno desejado para a chuva.</p>
-                        <p>Como seus parâmetros variam de acordo com a localização geográfica, será necessário que você busque os valores mais adequados para a região onde se encontra sua bacia e após isso, basta transcrevê-los nos campos indicados.</p>
+                        <p>A intensidade de chuva (representada ao lado como i<sub>máx</sub>), é a quantidade de chuva
+                            que cai por unidade de tempo. Ela pode ser obtida usando equações de chuvas intensas, como a
+                            equação de chuvas de intensidade-duração-frequência (IDF). Esta equação varia de acordo com
+                            a localização geográfica e o tempo de retorno desejado para a chuva.</p>
+                        <p>Como seus parâmetros variam de acordo com a localização geográfica, será necessário que você
+                            busque os valores mais adequados para a região onde se encontra sua bacia e após isso, basta
+                            transcrevê-los nos campos indicados.</p>
                         <p><strong>Passo 3:</strong> Considerando o Tempo de Retorno:</p>
-                        <p>O tempo de retorno é uma medida de probabilidade que indica a frequência média com que um evento de determinada magnitude é esperado em um determinado período. Para o caso do site, utilizaremos em anos. </p>
-                        <p>Entender o tempo de retorno adequado é crucial ao realizar análises hidrológicas, pois isso ajuda a estimar a frequência com que um evento de determinada magnitude pode ocorrer em uma determinada região. Isso é fundamental para o planejamento e o projeto de estruturas hidráulicas, como canais, barragens, diques e sistemas de drenagem, garantindo que essas estruturas sejam dimensionadas para resistir a eventos extremos de forma segura e econômica.</p>
-                        <p><strong>DICA:</strong> para garantir a eficácia do planejamento de uma obra hidráulica, é essencial realizar testes com diversos tempos de retorno, como 2, 5, 10, 25, 50 ou 100 anos, a fim de determinar o mais adequado. Esses testes permitem uma análise abrangente dos possíveis cenários de eventos extremos, levando em conta as características hidrológicas e climáticas da região, bem como os dados históricos de precipitação e vazão de rios. Ao considerar tais informações, os profissionais podem tomar decisões mais precisas e informadas, garantindo que a estrutura seja dimensionada para resistir a eventos extremos de forma segura e eficiente.</p>
+                        <p>O tempo de retorno é uma medida de probabilidade que indica a frequência média com que um
+                            evento de determinada magnitude é esperado em um determinado período. Para o caso do site,
+                            utilizaremos em anos. </p>
+                        <p>Entender o tempo de retorno adequado é crucial ao realizar análises hidrológicas, pois isso
+                            ajuda a estimar a frequência com que um evento de determinada magnitude pode ocorrer em uma
+                            determinada região. Isso é fundamental para o planejamento e o projeto de estruturas
+                            hidráulicas, como canais, barragens, diques e sistemas de drenagem, garantindo que essas
+                            estruturas sejam dimensionadas para resistir a eventos extremos de forma segura e econômica.
+                        </p>
+                        <p><strong>DICA:</strong> para garantir a eficácia do planejamento de uma obra hidráulica, é
+                            essencial realizar testes com diversos tempos de retorno, como 2, 5, 10, 25, 50 ou 100 anos,
+                            a fim de determinar o mais adequado. Esses testes permitem uma análise abrangente dos
+                            possíveis cenários de eventos extremos, levando em conta as características hidrológicas e
+                            climáticas da região, bem como os dados históricos de precipitação e vazão de rios. Ao
+                            considerar tais informações, os profissionais podem tomar decisões mais precisas e
+                            informadas, garantindo que a estrutura seja dimensionada para resistir a eventos extremos de
+                            forma segura e eficiente.</p>
                         <p><strong>Passo 4:</strong> Tempo de concentração:</p>
-                        <p>O tempo de concentração é o tempo necessário para que a água de uma bacia hidrográfica percorra a distância máxima até o ponto de saída. É uma medida importante na hidrologia, pois influencia diretamente o comportamento do escoamento e a estimativa da vazão de pico.</p>
-                        <p>Para entender melhor, e descobrir algumas formulas e conceitos importantes sobre esse passo, siga até o local do site destinado à essa parte da aprendizagem, depois traga para essa página o resultado.</p>
+                        <p>O tempo de concentração é o tempo necessário para que a água de uma bacia hidrográfica
+                            percorra a distância máxima até o ponto de saída. É uma medida importante na hidrologia,
+                            pois influencia diretamente o comportamento do escoamento e a estimativa da vazão de pico.
+                        </p>
+                        <p>Para entender melhor, e descobrir algumas formulas e conceitos importantes sobre esse passo,
+                            siga até o local do site destinado à essa parte da aprendizagem, depois traga para essa
+                            página o resultado.</p>
                         <p><strong>Passo 5:</strong> Determinando o Coeficiente de Escoamento (C):</p>
-                        <p>O coeficiente de escoamento (C) é uma estimativa da fração da chuva que se torna escoamento superficial. </p>
-                        <p>Para entender melhor sobre conceitos importantes sobre esse passo, siga até o local do site destinado à essa parte da aprendizagem e calcule você mesmo o coeficiente C para sua bacia, depois traga o resultado para esta página.</p>
-                    </div>                         
-                </div> 
-            </div>    
-        </div>  
-        <script>
-           function toggleMenu() {
-                var menuContent = document.getElementById("menuContent");
-                if (menuContent.style.display === "block") {
-                    menuContent.style.display = "none";
-                } else {
-                    menuContent.style.display = "block";
-                }
-            }
-        </script>   
+                        <p>O coeficiente de escoamento (C) é uma estimativa da fração da chuva que se torna escoamento
+                            superficial. </p>
+                        <p>Para entender melhor sobre conceitos importantes sobre esse passo, siga até o local do site
+                            destinado à essa parte da aprendizagem e calcule você mesmo o coeficiente C para sua bacia,
+                            depois traga o resultado para esta página.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
+
 </html>

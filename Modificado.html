@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS3/style.css">
-    <script src="JS/script.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Racional Modificado</title>
-</head>
-<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS3/style.css">
+        <script src="JS/script.js"></script>
+        <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+        <title>Racional Modificado</title>
+    </head>
+
     <body>
+
+        <nav>
+            <div class="menu2">
+                <div class="sandwich-menu" onclick="toggleMenu()">
+                    <div class="bar">
+                        <img src="./imagens/menu.svg" alt="sandwich-menu" srcset="">
+                    </div>
+                </div>
+
+                <div class="menu-items" id="menuItems">
+
+                    <div class="blue-bg2">
+                        <!-- <div class="vertical-line"></div>  -->
+                        <!-- Linha vertical -->
+                        <img src="imagens/UTFPR.png" alt="Imagem Hidrologia" class="logo">
+                        <div class="menu">
+                            <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo
+                                    Coeficiente C</button></a>
+                            <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de
+                                    Concentração</button></a>
+                            <a href="Modificado.html" target="_blank" rel="next"><button class="button-blue">Método Racional
+                                    Modificado</button></a>
+                            <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
+                        </div>
+                        <div class="info-rodape">
+                            <p class="card">Desenvolvido por: <br>Carolina Montanha Garcez </p>
+                            <p class="card">Orientadora: Dr. <sup>a</sup> Andrea Jabur <br>Coorientador: Dr. Muriel Godoi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <div class="header">
             <div class="blue-bg">
                 <div class="vertical-line"></div> <!-- Linha vertical -->
                 <img src="imagens/UTFPR.png" alt="LOGO" class="logo">
                 <div class="menu">
-                    <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo Coeficiente C</button></a>
-                    <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de Concentração</button></a>
+                    <a href="CoeficienteC.html" target="_blank" rel="next"><button class="button-blue">Cálculo Coeficiente
+                            C</button></a>
+                    <a href="TempoConcentracao.html" target="_blank" rel="next"><button class="button-blue">Tempo de
+                            Concentração</button></a>
                     <a href="index.html" rel="prev"><button class="button-blue">Método Racional</button></a>
                     <a href="SaibaMais.html" rel="next"><button class="button-blue">Saiba Mais</button></a>
                 </div>
@@ -30,71 +67,93 @@
             <h1 class="title">Cálculo de vazão pelo Método Racional Modificado</h1>
             <div class="container">
                 <div class="column">
-                        <div class="button-container">
-                            <h2>Insira os parâmetros da Equação da chuva para sua região: </h2>
-                            <img src="imagens/Equação da chuva.png" alt="Equação da Chuva" class="equacoes">
-                            <div class="input-container">
-                                <div class="label-container"><label for="TR">Período de retorno T<sub>R</sub> (anos):</label></div>
-                                <div class="input-field"><input type="number" step="any" id="TR"></div>
+                    <div class="button-container">
+                        <h2>Insira os parâmetros da Equação da chuva para sua região: </h2>
+                        <img src="imagens/Equação da chuva.png" alt="Equação da Chuva" class="equacoes">
+                        <div class="input-container">
+                            <div class="label-container"><label for="TR">Período de retorno T<sub>R</sub> (anos):</label>
                             </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="K">Parâmetro K:</label></div>
-                                <div class="input-field"><input type="number" step="any" id="K"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="m">Parâmetro m:</label></div>
-                                <div class="input-field"><input type="number" step="any" id="m"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="t0">Parâmetro t<sub>0</sub></label></div>
-                                <div class="input-field"><input type="number" step="any" id="t0"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="n">Parâmetro n:</label></div>
-                                <div class="input-field"><input type="number" step="any" id="n"></div>
-                            </div>
-                            <h2>Insira tempo de concentração calculado para sua bacia: </h2>
-                            <div class="input-container">
-                                <div class="label-container"><label for="tc">Tempo de concentração calculado t<sub>c</sub> (min):</label></div>
-                                <div class="input-field"><input type="number" step="any" id="tc"></div>
-                            </div>
-                            <h2>Insira os parâmetros de característica da sua bacia: </h2>
-                            <div class="input-container">
-                                <div class="label-container"><label for="area">Área bacia (km<sup>2</sup>):</label></div>
-                                <div class="input-field"><input type="number" step="any" id="area"></div>
-                            </div>
-                            <div class="input-container">
-                                <div class="label-container"><label for="c">Coeficiente calculado C:</label></div>
-                                <div class="input-field"><input type="number" step="any" id="c"></div>
-                            </div>
-                            <h2>Equação para o cálculo pelo Método Racional Modificado: </h2>
-                            <img src="imagens/Modificado.png" alt="Equacao metodo racional modificado" class="equacoes1"><br>
-                            <p>Rural:</p><img src="imagens/rural.png" alt="fi rural" class="equacoes3"><br>
-                            <p>Urbana:</p><img src="imagens/urbana.png" alt="fi urbana" class="equacoes3">
-                            <div class="selection-container">
-                                <label for="tipoBacia">Selecione o tipo de bacia:</label>
-                                <select id="tipoBacia" onchange="selecionarTipoBacia()">
-                                    <option value="escolha">Escolha uma opção</option>
-                                    <option value="urbana">Urbana</option>
-                                    <option value="rural">Rural</option>
-                                </select>
-                            </div>
-                            <button class="calculate-button" onclick="calcularVazaoMetodoRacionalModificado()">Calcular vazão da bacia</button>
-                            <p id="vazaoModificado"></p>
+                            <div class="input-field"><input type="number" step="any" id="TR"></div>
                         </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="K">Parâmetro K:</label></div>
+                            <div class="input-field"><input type="number" step="any" id="K"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="m">Parâmetro m:</label></div>
+                            <div class="input-field"><input type="number" step="any" id="m"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="t0">Parâmetro t<sub>0</sub></label></div>
+                            <div class="input-field"><input type="number" step="any" id="t0"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="n">Parâmetro n:</label></div>
+                            <div class="input-field"><input type="number" step="any" id="n"></div>
+                        </div>
+                        <h2>Insira tempo de concentração calculado para sua bacia: </h2>
+                        <div class="input-container">
+                            <div class="label-container"><label for="tc">Tempo de concentração calculado t<sub>c</sub>
+                                    (min):</label></div>
+                            <div class="input-field"><input type="number" step="any" id="tc"></div>
+                        </div>
+                        <h2>Insira os parâmetros de característica da sua bacia: </h2>
+                        <div class="input-container">
+                            <div class="label-container"><label for="area">Área bacia (km<sup>2</sup>):</label></div>
+                            <div class="input-field"><input type="number" step="any" id="area"></div>
+                        </div>
+                        <div class="input-container">
+                            <div class="label-container"><label for="c">Coeficiente calculado C:</label></div>
+                            <div class="input-field"><input type="number" step="any" id="c"></div>
+                        </div>
+                        <h2>Equação para o cálculo pelo Método Racional Modificado: </h2>
+                        <img src="imagens/Modificado.png" alt="Equacao metodo racional modificado" class="equacoes1"><br>
+                        <p>Rural:</p><img src="imagens/rural.png" alt="fi rural" class="equacoes3"><br>
+                        <p>Urbana:</p><img src="imagens/urbana.png" alt="fi urbana" class="equacoes3">
+                        <div class="selection-container">
+                            <label for="tipoBacia">Selecione o tipo de bacia:</label>
+                            <select id="tipoBacia" onchange="selecionarTipoBacia()">
+                                <option value="escolha">Escolha uma opção</option>
+                                <option value="urbana">Urbana</option>
+                                <option value="rural">Rural</option>
+                            </select>
+                        </div>
+                        <button class="calculate-button" onclick="calcularVazaoMetodoRacionalModificado()">Calcular vazão da
+                            bacia</button>
+                        <p id="vazaoModificado"></p>
+                    </div>
                     <div class="balloon">
-                        <p>O Método Racional Modificado é uma extensão do Método Racional, utilizado para estimar a vazão de pico em bacias hidrográficas. Ao considerar o uso do solo e as características da bacia, o método incorpora o coeficiente ∅ para áreas rurais e urbanas.</p>
-                        <p>O Método Racional Modificado é frequentemente utilizado em situações onde o Método Racional clássico pode não ser suficiente para fornecer estimativas precisas da vazão de pico, especialmente em bacias hidrográficas urbanas ou altamente desenvolvidas. Algumas das vantagens distintas do Método Racional Modificado em comparação com o clássico incluem:</p>
-                        <p><strong>Consideração de Coeficientes Específicos;<br>Avaliação de Drenagem Urbana;<br>Planejamento Hidrológico Aprimorado.</strong></p>
-                        <p>Por meio da utilização do Método Racional Modificado, os profissionais da área podem aprimorar suas análises hidrológicas, especialmente em áreas urbanas, levando em conta os efeitos da urbanização no ciclo hidrológico e garantindo que as estruturas de drenagem sejam dimensionadas de maneira adequada e eficaz.</p>
-                        <p>Coeficiente ∅ para <strong>Bacias Rurais:</strong> Este coeficiente refere-se à fração da precipitação que se transforma em escoamento superficial em áreas rurais com presença de vegetação, solos mais permeáveis e menor quantidade de superfícies pavimentadas.</p>
-                        <p>Coeficiente ∅ para <strong>Bacias Urbanas:</strong> Este coeficiente representa a proporção da chuva que se torna escoamento superficial em áreas urbanas, caracterizadas por uma maior quantidade de superfícies impermeáveis, como estradas e edifícios.</p>
-                        <p>Ao incorporar esses coeficientes no Método Racional Modificado, é possível realizar estimativas mais precisas da vazão de pico, levando em consideração as diferenças significativas entre bacias hidrográficas rurais e urbanas. Isso contribui para um planejamento hidrológico mais eficaz, especialmente em áreas sujeitas a mudanças no uso do solo e urbanização crescente.</p><br>
-                        <p>Agora é a sua vez! Insira o valor das variáveis referentes à bacia em estudo e calcule agora o valor de vazão pelo método racional modificado.</p>
-                    </div>                             
-                </div> 
+                        <p>O Método Racional Modificado é uma extensão do Método Racional, utilizado para estimar a vazão de
+                            pico em bacias hidrográficas. Ao considerar o uso do solo e as características da bacia, o
+                            método incorpora o coeficiente ∅ para áreas rurais e urbanas.</p>
+                        <p>O Método Racional Modificado é frequentemente utilizado em situações onde o Método Racional
+                            clássico pode não ser suficiente para fornecer estimativas precisas da vazão de pico,
+                            especialmente em bacias hidrográficas urbanas ou altamente desenvolvidas. Algumas das vantagens
+                            distintas do Método Racional Modificado em comparação com o clássico incluem:</p>
+                        <p><strong>Consideração de Coeficientes Específicos;<br>Avaliação de Drenagem
+                                Urbana;<br>Planejamento Hidrológico Aprimorado.</strong></p>
+                        <p>Por meio da utilização do Método Racional Modificado, os profissionais da área podem aprimorar
+                            suas análises hidrológicas, especialmente em áreas urbanas, levando em conta os efeitos da
+                            urbanização no ciclo hidrológico e garantindo que as estruturas de drenagem sejam dimensionadas
+                            de maneira adequada e eficaz.</p>
+                        <p>Coeficiente ∅ para <strong>Bacias Rurais:</strong> Este coeficiente refere-se à fração da
+                            precipitação que se transforma em escoamento superficial em áreas rurais com presença de
+                            vegetação, solos mais permeáveis e menor quantidade de superfícies pavimentadas.</p>
+                        <p>Coeficiente ∅ para <strong>Bacias Urbanas:</strong> Este coeficiente representa a proporção da
+                            chuva que se torna escoamento superficial em áreas urbanas, caracterizadas por uma maior
+                            quantidade de superfícies impermeáveis, como estradas e edifícios.</p>
+                        <p>Ao incorporar esses coeficientes no Método Racional Modificado, é possível realizar estimativas
+                            mais precisas da vazão de pico, levando em consideração as diferenças significativas entre
+                            bacias hidrográficas rurais e urbanas. Isso contribui para um planejamento hidrológico mais
+                            eficaz, especialmente em áreas sujeitas a mudanças no uso do solo e urbanização crescente.</p>
+                        <br>
+                        <p>Agora é a sua vez! Insira o valor das variáveis referentes à bacia em estudo e calcule agora o
+                            valor de vazão pelo método racional modificado.</p>
+                    </div>
+                </div>
             </div>
-        </div>  
-        
-</body>
+        </div>
+
+    </body>
+
 </html>
