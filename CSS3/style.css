@@ -70,63 +70,6 @@ body {
     background-color: #008bb3;
 }
 
-/*.question-mark {
-    position: fixed; 
-    bottom: 20px;  
-    left: 20px;  
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 30px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.question-mark:hover {
-    background-color: #26b7f4;
-}
-*/
-/* balao de comentario
-.info-balloon {
-    position: fixed; 
-    bottom: 1%;  
-    left: 3%;  
-    min-width: 15%;
-    min-height: 12%;
-    color: white;
-    text-align: center;
-    z-index: 1;    
-    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.5);
-    font-size: small;
-    font-family: 'Montserrat', sans-serif;
-}
-/*
-.question-mark:hover + .info-balloon {
-    display: block;
-}
-.equacoes:hover + .info-balloon {
-    display: block;
-}
-.equacoes1:hover + .info-balloon {
-    display: block;
-}
-.equacoes2:hover + .info-balloon {
-    display: block;
-}
-.equacoes3:hover + .info-balloon {
-    display: block;
-}
-
-
-.paragrafo-ballon {
-    color: #007ea3;
-    font-size: 60%;
-}
- termina balao de comentario*/
-
 .vertical-line {
     width: 1%;
     height: 100%;
@@ -141,9 +84,8 @@ body {
     position: absolute;
     bottom: 1%;
     left: 3%;
-    min-width: 15%;
-    min-height: 12%;
-    background-color: #344A53;
+    min-height: 10%;
+    background-color: #00a5cf;
     border-radius: 15px;
     color: white;
     text-align: center;
@@ -152,7 +94,7 @@ body {
     font-size: small;
     font-family: 'Montserrat', sans-serif;
     width: 90%;
-
+    justify-content: center;
 }
 
 .card {
@@ -320,7 +262,7 @@ input {
 
 .balloon {
     background-color: white;
-    color: #43655A;
+    color: #555555;
     padding: 1%;
     border-radius: 50px;
     height: 50%;
@@ -331,23 +273,31 @@ input {
     text-align: justify;
     overflow-y: auto;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+    line-height: 1.6;
 }
 
 .balloon p {
     margin-bottom: 4%;
 }
 
-.balloon p:first-child {
+.balloon h1 {
     font-size: 120%;
     font-weight: bold;
+
 }
 
-.balloon p:nth-child(2) {
+.balloon h2 {
+    font-size: 70%;
+    text-align: center;
+}
+
+.balloon h3 {
     font-size: 100%;
 }
 
-.balloon p:nth-of-type(3) {
-    font-size: 120%;
+.balloon h4 {
+    font-size: 70%;
+    text-align: center;
 }
 
 .tabela {
@@ -392,9 +342,6 @@ nav {
     display: none;
 }
 
-
-
-
 @media only screen and (max-width: 545px) {
     .menu-items {
         width: 80%;
@@ -404,8 +351,12 @@ nav {
 
     .info-rodape {
         position: relative;
+        top: 32%;
+        left: 5%;
+        font-size: 80%;
+        align-items: center;
+        min-height: 5%;
     }
-
 
     nav {
         display: block;
@@ -416,11 +367,11 @@ nav {
     }
 
     .bar {
-        background-color: #007ea3;
+        background-color: #00a5cf;
     }
 
     .blue-bg2 {
-        background-color: #007ea3;
+        background-color: #00a5cf;
         /* Largura da faixa azul */
         height: 100vh;
         /* Altura igual à altura da viewport */
@@ -434,13 +385,6 @@ nav {
         /* display: initial; */
 
     }
-
-
-    /* .menu.active {
-        display: block;
-        width: 80%;
-        margin: 0 auto;
-    } */
 
     .blue-bg {
         display: none;
@@ -472,6 +416,7 @@ nav {
         bottom: 2%;
         left: 15%;
         margin-bottom: 20px;
+        border-radius: 20px;
     }
 
     .header {
@@ -522,6 +467,12 @@ nav {
     .equacoes4 {
         max-width: 25%;
         margin-left: 65%;
+        margin-bottom: 2%;
+    }
+
+    .equacoestc {
+        max-width: 50%;
+        margin-left: 20%;
         margin-bottom: 1%;
     }
 
@@ -551,7 +502,11 @@ nav {
 @media only screen and (min-width: 546px) and (max-width: 1024px) {
     .info-rodape {
         position: relative;
-        margin-top: 10rem;
+        top: 35%;
+        left: 5%;
+        font-size: 80%;
+        align-items: center;
+        min-height: 5%;
     }
 
     nav {
@@ -563,12 +518,12 @@ nav {
     }
 
     .bar {
-        background-color: #007ea3;
+        background-color:#00a5cf;
     }
 
     .menu-items {
-        width: 25%;
-        background-color: #007ea3;
+        width: 40%;
+        background-color: #00a5cf;
 
     }
 
@@ -579,7 +534,7 @@ nav {
     }
 
     .blue-bg2 {
-        background-color: #007ea3;
+        background-color: #00a5cf;
         /* Largura da faixa azul */
         height: 100vh;
         /* Altura igual à altura da viewport */
@@ -603,6 +558,7 @@ nav {
         bottom: 2%;
         left: 20%;
         margin-bottom: 10%;
+        border-radius: 20px;
     }
 
     .header {
@@ -655,6 +611,12 @@ nav {
         max-width: 20%;
         margin-left: 65%;
         margin-bottom: 1%;
+    }
+
+    .equacoestc {
+        max-width: 35%;
+        margin-left: 20%;
+        margin-bottom: 2%;
     }
 
     .calculate-button {
